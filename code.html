@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en" style=""><head></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-surface-container-highest selection:text-primary"><svg aria-hidden="true" class="inline-defs-container" style="position:absolute;width:0;height:0;overflow:hidden"></svg><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>Supergide — Autonomous Enterprise Intelligence</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300..900;1,300..900&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}
+@keyframes kinetic-cube {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-6px) rotate(2.5deg); }
+}
+@keyframes kinetic-cube-hover {
+  0%, 100% { transform: translateY(-2px) rotate(0deg) scale(1.04); }
+  50% { transform: translateY(-10px) rotate(4deg) scale(1.06); }
+}
+@keyframes kinetic-stack {
+  0%, 100% { transform: scaleY(1) scaleX(1); }
+  50% { transform: scaleY(0.92) scaleX(1.04) translateY(-2px); }
+}
+@keyframes kinetic-stack-hover {
+  0%, 100% { transform: scaleY(1.02) scaleX(1.02); }
+  50% { transform: scaleY(0.88) scaleX(1.08) translateY(-4px); }
+}
+@keyframes kinetic-scan {
+  0% { transform: translateY(-100%); opacity: 0; }
+  30% { opacity: 0.8; }
+  70% { opacity: 0.8; }
+  100% { transform: translateY(220%); opacity: 0; }
+}
+@keyframes kinetic-verify {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(8deg); }
+}
+@keyframes kinetic-verify-hover {
+  0%, 100% { transform: rotate(-2deg) scale(1.05); }
+  50% { transform: rotate(12deg) scale(1.05); }
+}
+
+.anim-cube {
+  animation: kinetic-cube 4s ease-in-out infinite;
+  transform-origin: center center;
+}
+.group:hover .anim-cube {
+  animation: kinetic-cube-hover 2.2s ease-in-out infinite;
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.08));
+}
+
+.anim-stack {
+  animation: kinetic-stack 3.5s ease-in-out infinite;
+  transform-origin: center bottom;
+}
+.group:hover .anim-stack {
+  animation: kinetic-stack-hover 1.8s ease-in-out infinite;
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.08));
+}
+
+.scan-laser {
+  animation: kinetic-scan 2.8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.anim-verify {
+  animation: kinetic-verify 4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  transform-origin: 60px 60px;
+}
+.group:hover .anim-verify {
+  animation: kinetic-verify-hover 2s cubic-bezier(0.34, 1.56, 0.64, 1) infinite;
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.08));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .anim-cube,
+  .anim-stack,
+  .anim-verify,
+  .scan-laser,
+  .group:hover .anim-cube,
+  .group:hover .anim-stack,
+  .group:hover .anim-verify {
+    animation: none !important;
+    transform: none !important;
+  }
+}
+</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "tertiary-fixed-dim": "#c8c6c5", "secondary-container": "#464747", "on-tertiary-fixed": "#1b1c1c", "primary": "#ffffff", "tertiary-container": "#e5e2e1", "on-primary-fixed": "#1a1c1b", "surface-dim": "#131313", "secondary": "#c7c6c6", "outline": "#8e928f", "surface-container-lowest": "#0e0e0e", "primary-fixed": "#e2e3e1", "on-secondary-container": "#b5b5b5", "surface-container-high": "#2a2a2a", "surface-bright": "#3a3939", "inverse-primary": "#5d5f5d", "on-tertiary-container": "#656464", "surface-container-highest": "#353534", "surface-tint": "#c6c7c5", "tertiary-fixed": "#e5e2e1", "on-tertiary-fixed-variant": "#474746", "on-primary-fixed-variant": "#454746", "primary-container": "#e2e3e1", "error": "#ffb4ab", "on-surface-variant": "#c4c7c5", "surface": "#131313", "on-error-container": "#ffdad6", "error-container": "#93000a", "surface-variant": "#353534", "secondary-fixed-dim": "#c7c6c6", "inverse-surface": "#e5e2e1", "on-secondary-fixed-variant": "#464747", "inverse-on-surface": "#313030", "tertiary": "#ffffff", "on-surface": "#e5e2e1", "on-error": "#690005", "primary-fixed-dim": "#c6c7c5", "on-background": "#e5e2e1", "surface-container": "#201f1f", "secondary-fixed": "#e3e2e2", "on-tertiary": "#303030", "on-secondary-fixed": "#1b1c1c", "on-primary": "#2f3130", "background": "#131313", "on-secondary": "#303031", "on-primary-container": "#636563", "outline-variant": "#444846", "surface-container-low": "#1c1b1b" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter": "1.5rem", "space-md": "1rem", "margin": "2rem", "space-lg": "1.5rem", "space-xl": "2.5rem", "space-xs": "0.25rem", "gutter-sm": "1rem", "margin-lg": "4rem", "margin-sm": "1rem", "gutter-lg": "2rem", "space-sm": "0.5rem" }, "fontFamily": { "headline-lg": [ "Hanken Grotesk" ], "headline-md": [ "Hanken Grotesk" ], "body-lg": [ "Hanken Grotesk" ], "body-md": [ "Hanken Grotesk" ], "mono-technical": [ "JetBrains Mono" ], "display-xl-mobile": [ "Hanken Grotesk" ], "mono-micro": [ "JetBrains Mono" ], "display-xl": [ "Hanken Grotesk" ], "headline-lg-mobile": [ "Hanken Grotesk" ] }, "fontSize": { "headline-lg": [ "2.75rem", { "lineHeight": "3rem", "letterSpacing": "-0.03em", "fontWeight": "400" } ], "headline-md": [ "1.5rem", { "lineHeight": "1.875rem", "letterSpacing": "-0.02em", "fontWeight": "500" } ], "body-lg": [ "1.125rem", { "lineHeight": "1.75rem", "letterSpacing": "-0.01em", "fontWeight": "400" } ], "body-md": [ "0.9375rem", { "lineHeight": "1.5rem", "letterSpacing": "0em", "fontWeight": "400" } ], "mono-technical": [ "0.8125rem", { "lineHeight": "1.25rem", "letterSpacing": "0.02em", "fontWeight": "400" } ], "display-xl-mobile": [ "2.5rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.03em", "fontWeight": "400" } ], "mono-micro": [ "0.625rem", { "lineHeight": "0.875rem", "letterSpacing": "0.14em", "fontWeight": "500" } ], "display-xl": [ "4.5rem", { "lineHeight": "4.75rem", "letterSpacing": "-0.04em", "fontWeight": "400" } ], "headline-lg-mobile": [ "1.75rem", { "lineHeight": "2.125rem", "letterSpacing": "-0.02em", "fontWeight": "400" } ] } } } };</script><header class="fixed top-0 left-0 right-0 z-50 bg-transparent backdrop-blur-md border-b border-white/10"><div class="h-16 w-full max-w-7xl mx-auto px-margin flex items-center justify-between"><div class="flex items-center"><a class="flex items-center gap-2.5 group select-none" data-path="product" href="#"><svg class="w-5 h-5 text-[#2563EB] fill-current inline-block transform transition-transform group-hover:scale-110 duration-150" viewbox="0 0 24 24"><path d="M12 2C12 7.5 16.5 12 22 12C16.5 12 12 16.5 12 22C12 16.5 7.5 12 2 12C7.5 12 12 7.5 12 2Z"></path></svg><span class="font-headline-md text-xl tracking-tight text-white font-semibold">Supergide</span></a></div><div class="flex items-center"><a class="inline-flex items-center justify-center bg-white text-[#111111] font-body-md text-sm px-5 py-2 hover:bg-[#E5E5E5] transition-colors font-medium shadow-sm" data-path="book-demo" href="#">Join waitlist</a></div></div></header><main class="w-full pt-16 bg-background relative min-h-screen"><div class="flex flex-col w-full bg-[#FAFAFA] text-[#111111] antialiased selection:bg-[#111111] selection:text-white">
+<!-- HERO SECTION -->
+<section class="relative w-full border-b border-[#E5E5E5] overflow-hidden pt-12 pb-20 md:pt-20 md:pb-28">
+<!-- Diagonal background technical watermark grid lines on borders -->
+<div class="absolute inset-0 pointer-events-none opacity-40 [background-image:linear-gradient(45deg,#000_1px,transparent_1px)] [background-size:32px_32px] mask-[radial-gradient(ellipse_at_center,transparent_40%,black_80%)]"></div>
+<div class="max-w-6xl mx-auto px-6 relative z-10">
+<!-- Top Announcement Tag -->
+<div class="flex justify-center mb-6">
+<div class="inline-flex items-center gap-2.5 px-3 py-1 bg-white border border-[#E0E0E0] shadow-sm rounded-none text-xs tracking-wider">
+<span class="bg-[#111111] text-white font-mono text-[10px] px-1.5 py-0.5 tracking-wider font-semibold">IN-APP</span>
+<span class="font-mono text-[11px] text-[#555555] tracking-widest uppercase">AUTONOMOUS AGENT</span>
+<span class="text-[#2563EB] text-xs">✦</span>
+</div>
+</div>
+<!-- Main Headline -->
+<div class="max-w-4xl mx-auto text-center">
+<h1 class="text-4xl sm:text-6xl md:text-7xl font-light tracking-tight text-[#111111] leading-[1.08] mb-6">
+          Turn customer requests into<br/>
+<span class="font-normal text-[#737373]">completed actions.</span>
+</h1>
+<p class="max-w-2xl mx-auto text-base sm:text-lg text-[#555555] font-normal leading-relaxed mb-8">SuperGuide lets users ask for what they need and gets the task done inside your product</p>
+<!-- CTA Buttons -->
+<div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+<a class="w-full sm:w-auto px-6 py-3 bg-[#111111] text-white text-sm font-medium tracking-tight hover:bg-[#262626] transition-all flex items-center justify-center gap-2 shadow-sm" href="#">
+<span class="">Join Waitlist</span>
+<span class="font-mono text-xs">→</span>
+</a>
+<a class="w-full sm:w-auto px-6 py-3 bg-white text-[#111111] border border-[#D4D4D4] text-sm font-medium tracking-tight hover:border-[#111111] hover:bg-[#F5F5F5] transition-all flex items-center justify-center gap-2" href="#">
+<span class="">Book a Demo</span>
+</a>
+</div>
+</div>
+<!-- Halftone Procedural Graphic & Live Action Card -->
+<div class="relative mt-12 sm:mt-16 w-full max-w-4xl mx-auto flex flex-col items-center">
+<!-- Crosshair guides in cardinal points -->
+<div class="absolute -top-3 left-4 text-[#888888] font-mono text-xs select-none">+</div>
+<div class="absolute -top-3 right-4 text-[#888888] font-mono text-xs select-none">+</div>
+<div class="absolute -bottom-3 left-4 text-[#888888] font-mono text-xs select-none">+</div>
+<div class="absolute -bottom-3 right-4 text-[#888888] font-mono text-xs select-none">+</div>
+<!-- The Circular Stippled Halftone Arc (Vector Stippling Field) -->
+<div class="w-full flex justify-center items-center py-2 sm:py-6 overflow-hidden">
+<svg class="w-full max-w-2xl h-auto select-none" fill="none" viewbox="0 0 800 360" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="16" id="dot-grid" patternunits="userSpaceOnUse" width="16" x="0" y="0">
+<circle cx="2" cy="2" fill="#D4D4D4" r="1"></circle>
+</pattern>
+<radialgradient cx="50%" cy="100%" id="halftone-mask" r="90%">
+<stop offset="0%" stop-color="#111111" stop-opacity="0.95"></stop>
+<stop offset="45%" stop-color="#222222" stop-opacity="0.7"></stop>
+<stop offset="70%" stop-color="#666666" stop-opacity="0.25"></stop>
+<stop offset="100%" stop-color="#999999" stop-opacity="0"></stop>
+</radialgradient>
+<mask id="arc-mask">
+<path d="M 120 340 A 280 230 0 0 1 680 340" fill="none" stroke="white" stroke-linecap="round" stroke-width="110"></path>
+</mask>
+</defs>
+<!-- Base decorative coordinates -->
+<text fill="#9CA3AF" font-family="JetBrains Mono, monospace" font-size="9" letter-spacing="0.1em" x="30" y="40">GRID_SYS // STIPPLE_MESH_V4</text>
+<text fill="#9CA3AF" font-family="JetBrains Mono, monospace" font-size="9" letter-spacing="0.1em" x="670" y="40">LATENCY: 1.4MS</text>
+<!-- Radiating Concentric Hairline Rings -->
+<path d="M 160 340 A 240 190 0 0 1 640 340" fill="none" stroke="#E5E7EB" stroke-dasharray="2 4" stroke-width="1"></path>
+<path d="M 100 340 A 300 240 0 0 1 700 340" fill="none" stroke="#E5E7EB" stroke-width="1"></path>
+<path d="M 50 340 A 350 280 0 0 1 750 340" fill="none" stroke="#F0F0F0" stroke-dasharray="1 6" stroke-width="1"></path>
+<!-- The Stipple Density Arch -->
+<g mask="url(#arc-mask)">
+<!-- Outer Halftone Orbit Band 1 -->
+<path d="M 80 340 A 320 250 0 0 1 720 340" opacity="0.15" stroke="#000000" stroke-dasharray="1 5" stroke-linecap="round" stroke-width="120"></path>
+<!-- Middle Dense Stipple Ring -->
+<path d="M 110 340 A 290 230 0 0 1 690 340" opacity="0.45" stroke="#111111" stroke-dasharray="1.5 3.5" stroke-linecap="round" stroke-width="80"></path>
+<!-- Core High Density Focal Vortex -->
+<path d="M 130 340 A 270 210 0 0 1 670 340" opacity="0.85" stroke="#050505" stroke-dasharray="1 2.2" stroke-linecap="round" stroke-width="44"></path>
+<!-- Concentrated Black Mass Rim -->
+<path d="M 140 340 A 260 200 0 0 1 660 340" opacity="0.9" stroke="#1A1A1A" stroke-dasharray="3 4" stroke-linecap="round" stroke-width="22"></path>
+</g>
+<!-- Apex Cobalt Star Marker -->
+<circle cx="400" cy="140" fill="#FFFFFF" r="14" stroke="#E5E5E5" stroke-width="1"></circle>
+<path d="M400 133 L402 138 L407 140 L402 142 L400 147 L398 142 L393 140 L398 138 Z" fill="#2563EB"></path>
+</svg>
+</div>
+<!-- Floating Interactive Execution Strip Over Halftone -->
+<div class="w-full max-w-xl -mt-16 sm:-mt-20 bg-white border border-[#D8D8D8] shadow-lg p-3 sm:p-4 flex items-center justify-between gap-3 text-xs">
+<div class="flex items-center gap-2.5 overflow-hidden">
+<span class="w-2 h-2 rounded-full bg-[#16A34A] animate-pulse shrink-0"></span>
+<span class="font-mono text-[#737373] shrink-0 uppercase text-[10px]">INTENT:</span>
+<span class="font-medium text-[#111111] truncate">"Export monthly report &amp; update billing threshold"</span>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<span class="bg-[#F4F4F5] border border-[#E4E4E7] font-mono text-[10px] text-[#52525B] px-2 py-0.5 font-medium">DISPATCHED IN 1.4s</span>
+<span class="text-[#16A34A] font-mono text-xs font-bold">✓</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SOCIAL PROOF / TRUSTED BY LOGO BAR -->
+<!-- BENEFITS / FEATURE ARCHITECTURE GRID ("Ask. Act. Verify.") -->
+<section class="w-full bg-[#FAFAFA] py-20 border-b border-[#E5E5E5] relative">
+<div class="max-w-6xl mx-auto px-6">
+<!-- Section Header -->
+<div class="mb-14">
+<div class="inline-flex items-center gap-1.5 font-mono text-[11px] text-[#555555] uppercase tracking-widest mb-3">
+<span class="w-1.5 h-1.5 bg-[#111111] inline-block"></span>
+<span class="">ARCHITECTURE // CORE ENGINE</span>
+</div>
+<h2 class="text-3xl sm:text-5xl font-light text-[#111111] tracking-tight mb-3">
+          Support that gets things done.
+        </h2>
+<p class="text-base text-[#666666] max-w-2xl font-normal leading-relaxed">
+          Your users don't always need another help article or chatbot answer. They need the task completed.
+        </p>
+</div>
+<!-- 3-Column Architectural Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 border border-[#E5E5E5] bg-white divide-y md:divide-y-0 md:divide-x divide-[#E5E5E5]">
+<!-- CARD 1: Ask for an action -->
+<div class="flex flex-col p-8 group hover:bg-[#FCFCFC] transition-all relative hover:ring-1 hover:ring-[#111111]/20">
+<!-- Monospace Technical Tag -->
+<div class="font-mono text-[10px] text-[#555555] tracking-widest uppercase mb-10">
+            [ 01 // UNDERSTAND THE REQUEST ]
+          </div>
+<!-- Stippled / Isometric Geometric Graphic -->
+<div class="h-44 w-full flex items-center justify-center mb-8 relative">
+<div class="relative anim-cube will-change-transform flex items-center justify-center">
+<svg class="w-32 h-32" fill="none" viewbox="0 0 120 120">
+<!-- Isometric Box 1 With Halftone Fill -->
+<polygon fill="#F4F4F5" points="60,20 100,42 60,64 20,42" stroke="#111111" stroke-width="1.2"></polygon>
+<!-- Left side stippled pattern -->
+<polygon fill="#E4E4E7" points="20,42 60,64 60,105 20,83" stroke="#111111" stroke-width="1.2"></polygon>
+<!-- Right side solid/dither -->
+<polygon fill="#18181B" points="60,64 100,42 100,83 60,105"></polygon>
+<!-- Monospace interior indicator -->
+<circle cx="60" cy="42" fill="#FFFFFF" r="5" stroke="#111111" stroke-width="1"></circle>
+<!-- Halftone Dots simulation inside face -->
+<circle cx="35" cy="65" fill="#71717A" r="1.5"></circle>
+<circle cx="45" cy="70" fill="#71717A" r="1.5"></circle>
+<circle cx="35" cy="75" fill="#71717A" r="1.5"></circle>
+<circle cx="45" cy="80" fill="#71717A" r="1.5"></circle>
+<circle cx="35" cy="85" fill="#71717A" r="1.5"></circle>
+<circle cx="45" cy="90" fill="#71717A" r="1.5"></circle>
+</svg>
+</div>
+</div>
+<!-- Description -->
+<h3 class="text-lg font-medium text-[#111111] mb-2 tracking-tight">
+            Ask for an action
+          </h3>
+<p class="text-sm text-[#666666] leading-relaxed">
+            Users simply tell Supergide what they want in natural language. Example: 'Add Sarah to the growth workspace with admin permissions.'
+          </p>
+<div class="mt-8 pt-4 border-t border-[#F0F0F0] flex items-center justify-between font-mono text-[10px] text-[#737373]">
+<span class="">INPUT: NATURAL LANGUAGE</span>
+<span class="">INTENT: PARSED</span>
+</div>
+</div>
+<!-- CARD 2: Execute, don't explain -->
+<div class="flex flex-col p-8 group hover:bg-[#FCFCFC] transition-all relative hover:ring-1 hover:ring-[#111111]/20">
+<!-- Monospace Technical Tag -->
+<div class="font-mono text-[10px] text-[#555555] tracking-widest uppercase mb-10">
+            [ 02 // COMPLETE THE WORKFLOW ]
+          </div>
+<!-- Stippled Slotted Cog/Sphere Graphic -->
+<div class="h-44 w-full flex items-center justify-center mb-8 relative">
+<div class="relative anim-stack will-change-transform flex items-center justify-center overflow-visible">
+<!-- Laser scan line overlay -->
+<div class="absolute inset-x-0 h-10 pointer-events-none overflow-hidden" style="top: 15px; height: 95px;">
+<div class="w-full h-0.5 bg-gradient-to-r from-transparent via-[#2563EB]/70 to-transparent scan-laser"></div>
+</div>
+<svg class="w-32 h-32" fill="none" viewbox="0 0 120 120">
+<!-- Sliced Horizontal Stipple Sphere/Cylinder -->
+<ellipse cx="60" cy="25" fill="#18181B" rx="35" ry="8"></ellipse>
+<ellipse cx="60" cy="38" fill="#E4E4E7" rx="38" ry="8" stroke="#18181B" stroke-dasharray="1 3" stroke-width="1.5"></ellipse>
+<ellipse cx="60" cy="51" fill="#18181B" rx="40" ry="8"></ellipse>
+<ellipse cx="60" cy="64" fill="#F4F4F5" rx="39" ry="8" stroke="#18181B" stroke-dasharray="1 2" stroke-width="1.5"></ellipse>
+<ellipse cx="60" cy="77" fill="#18181B" rx="36" ry="8"></ellipse>
+<ellipse cx="60" cy="90" fill="#E4E4E7" rx="30" ry="7" stroke="#18181B" stroke-dasharray="1 4" stroke-width="1.5"></ellipse>
+<!-- Center Axis Line -->
+<line stroke="#71717A" stroke-dasharray="2 3" stroke-width="1" x1="60" x2="60" y1="15" y2="105"></line>
+</svg>
+</div>
+</div>
+<!-- Description -->
+<h3 class="text-lg font-medium text-[#111111] mb-2 tracking-tight">
+            Execute, don't explain
+          </h3>
+<p class="text-sm text-[#666666] leading-relaxed">
+            Supergide traverses the product DOM and executes verified workflows natively on behalf of the customer. Zero documentation friction.
+          </p>
+<div class="mt-8 pt-4 border-t border-[#F0F0F0] flex items-center justify-between font-mono text-[10px] text-[#737373]">
+<span class="">RUNTIME: IN-APP SANDBOX</span>
+<span class="">CLICKS: 0</span>
+</div>
+</div>
+<!-- CARD 3: Instant verification -->
+<div class="flex flex-col p-8 group hover:bg-[#FCFCFC] transition-all relative hover:ring-1 hover:ring-[#111111]/20">
+<!-- Monospace Technical Tag -->
+<div class="font-mono text-[10px] text-[#555555] tracking-widest uppercase mb-10">
+            [ 03 // VERIFY &amp; CONFIRM ]
+          </div>
+<!-- Stippled Jack/Orbital Cross Graphic -->
+<div class="h-44 w-full flex items-center justify-center mb-8 relative">
+<div class="relative flex items-center justify-center">
+<svg class="w-32 h-32" fill="none" viewbox="0 0 120 120">
+<!-- Central 3D Cross in Stipple Structure -->
+<rect fill="#E4E4E7" height="90" rx="3" stroke="#18181B" stroke-width="1.2" width="16" x="52" y="15"></rect>
+<rect fill="#18181B" height="16" rx="3" width="90" x="15" y="52"></rect>
+<!-- Diagonal Axis Jack Arms (with mechanical indexing oscillation) -->
+<g class="anim-verify will-change-transform origin-center">
+<rect fill="#71717A" height="56" rx="2" stroke="#18181B" stroke-width="1.2" transform="rotate(45 38 60)" width="12" x="32" y="32"></rect>
+</g>
+<!-- Halftone dots overlay -->
+<circle cx="60" cy="60" fill="#FFFFFF" r="4"></circle>
+<circle cx="60" cy="30" fill="#18181B" r="1.5"></circle>
+<circle cx="60" cy="90" fill="#18181B" r="1.5"></circle>
+<circle cx="30" cy="60" fill="#FFFFFF" r="1.5"></circle>
+<circle cx="90" cy="60" fill="#FFFFFF" r="1.5"></circle>
+</svg>
+</div>
+</div>
+<!-- Description -->
+<h3 class="text-lg font-medium text-[#111111] mb-2 tracking-tight">
+            Instant verification
+          </h3>
+<p class="text-sm text-[#666666] leading-relaxed">
+            Supergide confirms task completion and displays immediate proof to the user. Every action yields a deterministic, audit-logged outcome.
+          </p>
+<div class="mt-8 pt-4 border-t border-[#F0F0F0] flex items-center justify-between font-mono text-[10px] text-[#737373]">
+<span class="">LATENCY: 1.4s VERIFIED</span>
+<span class="">AUDIT: PROVENANCE</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- INTERACTIVE COMPARISON SECTION: "FROM EXPLAINING TO EXECUTING" -->
+<!-- SECURITY & INTEGRATION CREDIBILITY SECTION -->
+<!-- FREQUENTLY ASKED QUESTIONS SECTION -->
+<!-- BOTTOM CTA BANNER -->
+<section class="w-full bg-[#111111] text-white py-20 relative overflow-hidden">
+<!-- Subtle Stipple Mask on Dark -->
+<div class="absolute inset-0 pointer-events-none opacity-10 [background-image:radial-gradient(#FFFFFF_1px,transparent_1px)] [background-size:24px_24px]"></div>
+<div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+<h2 class="text-3xl sm:text-5xl font-light tracking-tight mb-4 text-white">
+        Ready to let your product execute for itself?
+      </h2>
+<p class="text-base text-[#A1A1AA] max-w-xl mx-auto mb-8 font-normal">
+        Join forward-thinking product teams offering zero-click workflows to their customers.
+      </p>
+<!-- Minimal High-Precision Form -->
+<form class="max-w-md mx-auto flex flex-col sm:flex-row gap-2" onsubmit="event.preventDefault(); alert('Demo request submitted.');">
+<input class="flex-1 bg-[#1C1C1E] border border-[#333333] px-4 py-3 text-sm text-white placeholder-[#71717A] focus:outline-none focus:border-white transition-colors" placeholder="name@company.com" required="" type="email"/>
+<button class="px-6 py-3 bg-white text-[#111111] text-sm font-medium hover:bg-[#E5E5E5] transition-colors shrink-0 font-sans flex items-center justify-center gap-1.5" type="submit">
+<span class="">Request Early Access</span>
+<span class="font-mono text-xs">→</span>
+</button>
+</form>
+</div>
+</section>
+</div></main>
+</body></html>

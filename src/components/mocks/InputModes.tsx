@@ -7,14 +7,14 @@ const iconBtn = 'w-7 h-7 inline-flex items-center justify-center rounded shrink-
 
 export function InputModes() {
   return (
-    <div className="grid gap-4 md:grid-cols-3">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
       <Card eyebrow="Text" title="Type it" text="Write the request the way you'd say it to a colleague.">
         <div className={`${composer} border-blue`}>
-          <span className="text-[13px] text-ink flex-1 pl-1 leading-snug">
+          <span className="text-[13px] text-ink flex-1 pl-1 leading-snug line-clamp-2">
             Cancel the trial for the Design workspace<span className="inline-block w-[1.5px] h-[14px] bg-ink align-middle ml-[1px] animate-pulse" />
           </span>
-          <span className={`${iconBtn} text-muted`}><Paperclip className="w-4 h-4" /></span>
-          <span className={`${iconBtn} text-muted`}><Mic className="w-4 h-4" /></span>
+          <span className={`${iconBtn} text-muted md:hidden lg:inline-flex`}><Paperclip className="w-4 h-4" /></span>
+          <span className={`${iconBtn} text-muted md:hidden lg:inline-flex`}><Mic className="w-4 h-4" /></span>
           <span className={`${iconBtn} bg-blue text-white`}><Send className="w-3.5 h-3.5" /></span>
         </div>
         <p className="mt-2.5 text-[12px] text-muted px-1">Plain words. No commands to learn.</p>
@@ -27,7 +27,7 @@ export function InputModes() {
               <span key={i} className="wave-bar w-[3px] rounded-full bg-blue" style={{ height: `${h * 24}px`, animationDelay: `${i * 70}ms` }} />
             ))}
           </div>
-          <span className={`${iconBtn} text-muted`}><Paperclip className="w-4 h-4" /></span>
+          <span className={`${iconBtn} text-muted md:hidden lg:inline-flex`}><Paperclip className="w-4 h-4" /></span>
           <span className={`${iconBtn} bg-blue text-white`}><Mic className="w-4 h-4" /></span>
           <span className={`${iconBtn} bg-sand text-faint`}><Send className="w-3.5 h-3.5" /></span>
         </div>
@@ -50,8 +50,8 @@ export function InputModes() {
         </div>
         <div className={`${composer} border-line`}>
           <span className="text-[13px] text-ink flex-1 pl-1">Fix whatever is causing this.</span>
-          <span className={`${iconBtn} text-blue-hover`}><Paperclip className="w-4 h-4" /></span>
-          <span className={`${iconBtn} text-muted`}><Mic className="w-4 h-4" /></span>
+          <span className={`${iconBtn} text-blue-hover md:hidden lg:inline-flex`}><Paperclip className="w-4 h-4" /></span>
+          <span className={`${iconBtn} text-muted md:hidden lg:inline-flex`}><Mic className="w-4 h-4" /></span>
           <span className={`${iconBtn} bg-blue text-white`}><Send className="w-3.5 h-3.5" /></span>
         </div>
       </Card>

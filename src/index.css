@@ -35,7 +35,7 @@
     @apply text-ink font-bold tracking-[-0.03em] leading-[1.08] text-[32px] sm:text-[40px] lg:text-[46px];
   }
   .h-card {
-    @apply text-ink font-semibold tracking-[-0.01em] leading-snug text-[18px] sm:text-[20px];
+    @apply text-ink font-semibold tracking-[-0.01em] leading-snug text-[18px] lg:text-[20px];
   }
   .eyebrow {
     @apply text-[13px] font-medium text-muted;
@@ -96,8 +96,11 @@
   visibility: hidden;
   pointer-events: none;
   white-space: nowrap;
-  left: 0;
+  left: -9999px;
   top: 0;
+  width: 0;
+  height: 0;
+  overflow: hidden;
 }
 .hl-measure > span {
   display: inline-block;

@@ -72,7 +72,7 @@ export function Home() {
 
       {/* How it works */}
       <Section id="how-it-works" tone="sand" eyebrow="How it works" title="Three steps. No clicking around.">
-        <div className="grid gap-4 md:grid-cols-3">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <StepAsk />
           <StepDo />
           <StepProof />
@@ -86,7 +86,7 @@ export function Home() {
 
       {/* What it can do */}
       <Section id="what-it-can-do" tone="sand" eyebrow="What it can do" title="Everyday tasks, done in seconds.">
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {tasks.map((t) => (
             <div key={t.title} className="bg-white rounded-xl border border-line p-6 flex flex-col">
               <h3 className="h-card">{t.title}</h3>
@@ -99,9 +99,9 @@ export function Home() {
 
       {/* Trust */}
       <Section id="trust" eyebrow="Trust" title="Only what it’s allowed to do.">
-        <div className="grid gap-4 md:grid-cols-3">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {trust.map((t) => (
-            <div key={t.title} className="card p-6 sm:p-7 flex flex-col">
+            <div key={t.title} className="card p-6 md:p-5 lg:p-7 flex flex-col">
               <h3 className="h-card">{t.title}</h3>
               <p className="mt-1.5 text-[15px] text-body leading-relaxed">{t.text}</p>
               <div className="mt-6 mt-auto pt-1">{t.mock}</div>
@@ -112,7 +112,7 @@ export function Home() {
 
       {/* For support teams */}
       <Section tone="sand" eyebrow="For support teams" title="Fewer tickets. Faster resolutions. Nothing new to write.">
-        <div className="grid gap-6 lg:gap-10 lg:grid-cols-[1.25fr_1fr] items-center">
+        <div className="grid grid-cols-1 gap-6 lg:gap-10 lg:grid-cols-[1.25fr_1fr] items-center">
           <InboxMock />
           <ul className="space-y-6">
             {teams.map((t) => (

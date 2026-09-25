@@ -21,7 +21,7 @@ export function Pricing() {
           </p>
         </div>
 
-        <div className="mt-12 grid gap-4 lg:grid-cols-[1fr_1fr] max-w-4xl">
+        <div className="mt-12 grid grid-cols-1 gap-4 lg:grid-cols-2 max-w-4xl">
           <div className="card p-7 sm:p-8">
             <h2 className="h-card">Early access</h2>
             <p className="mt-1.5 text-[15px] text-body">For teams who want to try Supergide on their product now.</p>

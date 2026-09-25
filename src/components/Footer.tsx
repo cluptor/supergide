@@ -38,8 +38,8 @@ const columns: { title: string; links: { label: string; to: string; placeholder?
 export function Footer() {
   return (
     <footer className="border-t border-line mt-auto">
-      <div className="container-site py-14 lg:py-20 grid gap-12 lg:grid-cols-[1.4fr_repeat(4,1fr)]">
-        <div>
+      <div className="container-site py-14 lg:py-20 grid grid-cols-2 gap-10 sm:grid-cols-4 lg:grid-cols-[1.4fr_repeat(4,1fr)]">
+        <div className="col-span-2 sm:col-span-4 lg:col-span-1">
           <Logo />
           <p className="mt-5 max-w-xs text-[15px] leading-relaxed text-muted">
             Support that gets it done. Your users ask, Supergide does it inside your product.

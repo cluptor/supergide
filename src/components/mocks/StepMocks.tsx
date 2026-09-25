@@ -8,11 +8,11 @@ export function StepAsk() {
   return (
     <MockCard eyebrow="Step 1" title="Ask" text="Type what you want, in your own words." tone="white">
       <div className={`${composer} border-blue`}>
-        <span className="text-[13px] text-ink flex-1 pl-1 leading-snug">
+        <span className="text-[13px] text-ink flex-1 pl-1 leading-snug line-clamp-2">
           Add Sarah to the Growth workspace with admin permissions<span className="inline-block w-[1.5px] h-[14px] bg-ink align-middle ml-[1px] animate-pulse" />
         </span>
-        <span className={`${iconBtn} text-muted`}><Paperclip className="w-4 h-4" /></span>
-        <span className={`${iconBtn} text-muted`}><Mic className="w-4 h-4" /></span>
+        <span className={`${iconBtn} text-muted md:hidden lg:inline-flex`}><Paperclip className="w-4 h-4" /></span>
+        <span className={`${iconBtn} text-muted md:hidden lg:inline-flex`}><Mic className="w-4 h-4" /></span>
         <span className={`${iconBtn} bg-blue text-white`}><Send className="w-3.5 h-3.5" /></span>
       </div>
       <div className="mt-2.5 flex flex-wrap gap-1.5 px-0.5">

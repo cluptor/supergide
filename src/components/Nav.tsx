@@ -18,7 +18,7 @@ export function Nav() {
       <div className="container-site h-[60px] flex items-center justify-between gap-6">
         <Logo />
 
-        <nav className="hidden md:flex items-center gap-1" aria-label="Main">
+        <nav className="hidden lg:flex items-center gap-1" aria-label="Main">
           {links.map((l) => (
             <NavLink
               key={l.to}
@@ -30,7 +30,7 @@ export function Nav() {
           ))}
         </nav>
 
-        <div className="hidden md:flex items-center gap-2">
+        <div className="hidden lg:flex items-center gap-2">
           <Link to="/contact" className="btn-ghost">
             Talk to us
           </Link>
@@ -41,7 +41,7 @@ export function Nav() {
 
         <button
           type="button"
-          className="md:hidden inline-flex items-center justify-center w-10 h-10 rounded hover:bg-sand"
+          className="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded hover:bg-sand"
           aria-expanded={open}
           aria-controls="mobile-nav"
           aria-label={open ? 'Close menu' : 'Open menu'}
@@ -58,7 +58,7 @@ export function Nav() {
       </div>
 
       {open && (
-        <div id="mobile-nav" className="md:hidden border-t border-line bg-white">
+        <div id="mobile-nav" className="lg:hidden border-t border-line bg-white">
           <nav className="container-site py-3 flex flex-col" aria-label="Mobile">
             {links.map((l) => (
               <Link

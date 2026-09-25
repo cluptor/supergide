@@ -19,7 +19,7 @@ export function Contact() {
 
   return (
     <section className="py-16 sm:py-24">
-      <div className="container-site grid gap-12 lg:grid-cols-[1fr_1fr] max-w-4xl">
+      <div className="container-site grid grid-cols-1 gap-12 lg:grid-cols-2 max-w-4xl">
         <div>
           <h1 className="h-section">Get in touch</h1>
           <p className="lede mt-5">Questions, partnerships, or a walkthrough of Supergide on your product.</p>

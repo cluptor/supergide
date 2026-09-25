@@ -31,3 +31,7 @@ dist-ssr
 
 # Build output
 dist-ssr
+
+# Local-only helpers, not part of the site
+tools
+docs

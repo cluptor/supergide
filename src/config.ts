@@ -1,66 +1,39 @@
 /**
- * Configuration for form URLs.
- * Replace these placeholder URLs with your actual Google Form or Tally Form links!
+ * Form wiring. Fill these in once the Tally forms exist.
+ * Until then, forms fall back to a mailto: link so visitors never see a dead button.
  */
-export const FORM_CONFIG = {
-  // Waitlist Google Form or Tally link
-  waitlistFormUrl: 'https://tally.so/#waitlist',
-  
-  // Demo request Google Form, Tally, or Cal/Calendly link
-  demoFormUrl: 'https://tally.so/#book-demo',
+export const CONTACT_EMAIL = 'hello@supergide.com'; // placeholder
+
+export const FORMS = {
+  // Tally form id, e.g. 'w2Xy9z' from https://tally.so/r/w2Xy9z
+  waitlist: '',
+  contact: '',
 };
 
 declare global {
   interface Window {
     Tally?: {
       openPopup: (formId: string, options?: Record<string, unknown>) => void;
-      closePopup: (formId: string) => void;
     };
   }
 }
 
-/**
- * Opens the target form either via Tally popup (if it's a Tally link)
- * or opens it in a secure new browser tab.
- */
-export function openWaitlistForm(prefillEmail?: string) {
-  openFormUrl(FORM_CONFIG.waitlistFormUrl, prefillEmail);
-}
-
-export function openDemoForm() {
-  openFormUrl(FORM_CONFIG.demoFormUrl);
-}
-
-function openFormUrl(url: string, email?: string) {
-  if (!url || url === '#' || url.startsWith('https://tally.so/#')) {
-    // If it's a placeholder or demo tally tag, show a polite alert with instructions or open
-    const targetUrl = prompt(
-      "Connect your Google Form or Tally Form URL in 'src/config.ts'.\n\nYou can also paste your live form URL below to test it immediately:",
-      url.startsWith('http') ? url : 'https://forms.google.com'
-    );
-    if (targetUrl) {
-      window.open(targetUrl, '_blank', 'noopener,noreferrer');
-    }
-    return;
-  }
-
-  let finalUrl = url;
-  if (email && email.trim()) {
-    const separator = finalUrl.includes('?') ? '&' : '?';
-    // Support common prefill parameters for Tally & Google Forms
-    finalUrl = `${finalUrl}${separator}email=${encodeURIComponent(email.trim())}`;
-  }
-
-  // If Tally widget is loaded and it's a Tally URL (e.g., tally.so/r/XYZ)
-  const tallyMatch = finalUrl.match(/tally\.so\/r\/([a-zA-Z0-9]+)/);
-  if (tallyMatch && window.Tally) {
-    window.Tally.openPopup(tallyMatch[1], {
+export function openWaitlist(email?: string) {
+  if (FORMS.waitlist && typeof window !== 'undefined' && window.Tally) {
+    window.Tally.openPopup(FORMS.waitlist, {
       layout: 'modal',
-      width: 600,
+      width: 560,
       hiddenFields: email ? { email } : undefined,
     });
     return;
   }
-
-  window.open(finalUrl, '_blank', 'noopener,noreferrer');
+  if (FORMS.waitlist) {
+    const url = new URL(`https://tally.so/r/${FORMS.waitlist}`);
+    if (email) url.searchParams.set('email', email);
+    window.open(url.toString(), '_blank', 'noopener,noreferrer');
+    return;
+  }
+  const subject = encodeURIComponent('Early access to Supergide');
+  const body = encodeURIComponent(`Hi,\n\nI'd like early access to Supergide.${email ? `\n\nEmail: ${email}` : ''}\n`);
+  window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
 }
